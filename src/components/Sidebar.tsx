@@ -1,6 +1,6 @@
 import React from "react";
 
-const Sidebar = () => {
+const Sidebar: React.FC = () => {
   return (
     <aside className="sidebar">
       <h3>Drawing Tools</h3>

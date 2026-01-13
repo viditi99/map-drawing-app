@@ -9,7 +9,6 @@ html, body, #root {
   margin: 0;
 }
 
-/* Leaflet must inherit height */
 .leaflet-container {
   height: 100%;
   width: 100%;

@@ -9,7 +9,6 @@ import "./App.css";
 function App() {
   const [features, setFeatures] = useState<Feature[]>([]);
 
-  // 🔽 EXPORT GEOJSON FUNCTION
   const exportGeoJSON = () => {
     if (features.length === 0) {
       alert("No shapes to export");
@@ -35,30 +34,24 @@ function App() {
 
   return (
     <div className="app">
-      {/* Header with centered title + export */}
       <header className="header">
-  <div className="header-left"></div>
+        <div className="header-left"></div>
 
-  <h1 className="header-title">Map Drawing Tool</h1>
+        <h1 className="header-title">Map Drawing Tool</h1>
 
-  <div className="header-right">
-    <button
-      className="export-btn"
-      onClick={exportGeoJSON}
-      disabled={features.length === 0}
-    >
-      Export GeoJSON
-    </button>
-  </div>
-</header>
+        <div className="header-right">
+          <button
+            className="export-btn"
+            onClick={exportGeoJSON}
+            disabled={features.length === 0}
+          >
+            Export GeoJSON
+          </button>
+        </div>
+      </header>
 
-
-      {/* Main Area */}
       <div className="main">
-        {/* Vertical Tools */}
         <Sidebar />
-
-        {/* Centered Map */}
         <div className="map-wrapper">
           <MapView features={features} setFeatures={setFeatures} />
         </div>
